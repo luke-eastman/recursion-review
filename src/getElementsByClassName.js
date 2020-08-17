@@ -6,5 +6,19 @@
 // But instead we're going to implement it from scratch:
 var getElementsByClassName = function(className
 ) {
-  // your code here
+
+  var body = document.body;
+  var result = [];
+  var getElements = function(body) {
+    if (body.classList !== undefined && body.classList.contains(className)) {
+      result.push(body);
+    }
+
+    for (var i = 0; i < body.childNodes.length; i++) {
+      getElements(body.childNodes[i]);
+    }
+
+  };
+  getElements(body);
+  return result;
 };
