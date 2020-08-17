@@ -4,6 +4,7 @@
 // };
 
 // But instead we're going to implement it from scratch:
+// Assignment Complete
 var getElementsByClassName = function(className
 ) {
 
